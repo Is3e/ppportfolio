@@ -1,0 +1,57 @@
+
+        
+        <div className="relative">
+            {/* Left fixed sidebar: texte */}
+            <aside className="fixed top-0 left-0 w-1/2 h-screen overflow-auto bg-white px-8 py-10">
+                <div className="max-w-[720px]">
+                    <Link to="/projects" className="text-sm text-gray-600 mb-4 inline-block">&lt; Back</Link>
+
+                    <h2 className="text-5xl font-serif py-2 pb-5">{project.title}</h2>
+
+                    <div className="flex items-center justify-between mb-6">
+                        <div className="flex flex-wrap gap-2">
+                            {project.techno.map((tech, index) => (
+                                <span
+                                    key={index}
+                                    className="px-3 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium border border-gray-200"
+                                >
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
+
+                        <div className="text-sm text-gray-500">{project.date}</div>
+                    </div>
+
+                    <hr className="mb-6" />
+
+                    <p className="mb-6 leading-relaxed text-gray-700">
+                        In a world witnessing escalating conflicts, intensifying war climates, and multiplying natural disasters, a new business emerges: luxury bunkers. Among them stands the Survival Condo, a hyper-secure apartment and leisure complex nestled within a former Atlas missile silo.
+                    </p>
+
+                    <div className="flex gap-6 mb-8">
+                        <a href="#" className="text-sm underline">More on Behance</a>
+                        <a href="#" className="text-sm underline">Simon's Youtube channel</a>
+                    </div>
+
+                    <div className="flex gap-4">
+                        <button className="px-6 py-3 rounded-full border">&lt;- Exploring Historical…</button>
+                        <button className="px-6 py-3 rounded-full border">Reconstructions of an e11… -&gt;</button>
+                    </div>
+                </div>
+            </aside>
+
+            {/* Right gallery: takes remaining space and is independently scrollable */}
+            <main className="ml-[50%] h-screen overflow-auto bg-black">
+                <div className="min-h-screen">
+                    <BentoGallery 
+                        images={[
+                            "https://url-image-grande-1.jpg",
+                            "https://url-image-petite-2.jpg",
+                            "https://url-image-petite-3.jpg",
+                            "https://url-image-grande-4.jpg"
+                        ]} 
+                    />
+                </div>
+            </main>
+        </div>
