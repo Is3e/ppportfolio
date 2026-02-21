@@ -1,7 +1,7 @@
 import React from 'react';
 import logoImg from '../assets/imgs/lewis-bleu.png';
 
-const Navbar = () => {
+const NavBar = () => {
   return (
     <nav className="top-0 z-50 fixed items-center w-full">
       <div className='container flex justify-between max-w-7xl mx-auto py-4'>
@@ -25,7 +25,7 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
 
 //  <nav className="bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/20 top-0 z-50 fixed items-center w-full ">
 //       <div className='container flex justify-between max-w-6xl mx-auto px-7 py-4'>

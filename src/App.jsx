@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useParams, Link } from 'react-router-dom';
 
 // Import de tes composants existants
-import Navbar from './components/Navbar';
+import NavBar from './components/NavBar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
@@ -15,7 +15,7 @@ import DetailProjet from './components/DetailProjet';
 // 1. Composant Page d'Accueil (rassemble tout ce que tu avais avant)
 const HomePage = () => (
   <>
-    <Navbar />
+    <NavBar />
     <Hero />
     <About />
     <Services />
