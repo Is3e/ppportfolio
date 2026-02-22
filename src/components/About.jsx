@@ -75,7 +75,7 @@ const About = () => {
            <div className="absolute rounded-3xl "></div>
            
            <img 
-              src="src\assets\imgs\front.JPG" 
+              src="./src/assets/imgs/front.JPG" //src\assets\imgs\front.JPG 
               alt="Louise" 
               className="w-full h-full object-cover rounded-3xl shadow-xl "
            />

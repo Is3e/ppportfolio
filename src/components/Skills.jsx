@@ -1,0 +1,130 @@
+import React from 'react';
+import { Globe, Layout, Server, Database, Smartphone } from 'lucide-react';
+
+const Skills = () => {
+    const skills = [
+        {
+            id: 1,
+            title: "Framework côté client",
+            icon: <Globe size={32} />,
+            description: "Conception d'interfaces modernes et réactives avec React, Tailwind CSS et JS.",
+            imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80",
+            // footerText: "Dernier projet : Oct 13, 2025"
+        },
+        {
+            id: 2,
+            title: "UX/UI Design",
+            icon: <Layout size={32} />,
+            description: "Création de parcours utilisateurs fluides, de wireframes et de prototypes interactifs sur Figma avant développement.",
+            imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80",
+            // footerText: "Dernier projet : Oct 13, 2025"
+        },
+        {
+            id: 3,
+            title: "Frameworks Serveur",
+            icon: <Server size={32} />,
+            description: "Architecture backend robuste avec Symfony, gestion d'API REST avec Node.js et Express.",
+            imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80",
+            // footerText: "Dernier projet : Oct 13, 2025"
+        },
+        {
+            id: 4,
+            title: "Base de Données",
+            icon: <Database size={32} />,
+            description: "Modélisation et gestion de bases de données SQL (PostgreSQL) et NoSQL (MongoDB).",
+            imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80",
+            // footerText: "Dernier projet : Oct 13, 2025"
+        },
+        {
+            id: 5,
+            title: "Développement Mobile",
+            icon: <Smartphone size={32} />,
+            description: "Adaptation des interfaces pour le mobile first",
+            imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80",
+            // footerText: "Dernier projet : Oct 13, 2025"
+        }
+    ];
+
+    return (
+        <section className="py-20 bg-[#F5F3ED] border-t border-gray-200">
+            <div className="max-w-7xl mx-auto px-6">
+                
+                {/* En-tête de la section */}
+                <div className="mb-12 max-w-2xl">
+                    <h2 className="font-titre text-5xl font-bold text-gray-900 mb-4">
+                        Mes domaines d'expertise
+                    </h2>
+                    <p className="text-gray-500">
+                        Une approche technique complète pour transformer vos idées en produits numériques performants.
+                    </p>
+                </div>
+
+                {/* CONTENEUR DE SCROLL HORIZONTAL CORRIGÉ */}
+                <div className="flex overflow-x-auto gap-8 pb-10 pt-4 snap-x snap-mandatory scroll-smooth hide-scrollbar">
+                    {skills.map((skill) => (
+                        <div 
+                            key={skill.id} 
+                            className="group relative w-72 h-72 flex-shrink-0 snap-start transition-transform duration-300 ease-out hover:-translate-y-3 cursor-pointer"
+                        >
+                            
+                            {/* 1. L'arrière du dossier (Violet uni) */}
+                            <div className="absolute inset-0 z-0 drop-shadow-xl">
+                                <div className="absolute top-0 left-0 w-[55%] h-12 bg-[#6E56CF] rounded-tl-2xl rounded-tr-xl" />
+                                <div className="absolute top-6 left-0 w-full h-[calc(100%-1.5rem)] bg-[#6E56CF] rounded-2xl" />
+                            </div>
+
+                            {/* 2. L'image du projet glissée à l'intérieur */}
+                            <div className="absolute z-10 top-10 left-4 right-4 h-36 rounded-xl overflow-hidden shadow-lg transition-transform duration-500 group-hover:-translate-y-2 group-hover:rotate-[-2deg] bg-white">
+                                <img 
+                                    src={skill.imageSrc} 
+                                    alt={skill.title}
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+
+                            {/* 3. Le devant du dossier (Effet Glassmorphism / Flou) */}
+                            <div className="absolute z-20 bottom-0 left-0 w-full h-[60%] bg-white/20 backdrop-blur-md rounded-2xl border border-white/30 shadow-[0_-4px_24px_rgba(0,0,0,0.1)] p-5 flex flex-col justify-between overflow-hidden">
+                                
+                                <div>
+                                    <div className="flex justify-between items-start mb-1">
+                                        <h3 className="text-white text-xl font-bold tracking-wide">
+                                            {skill.title}
+                                        </h3>
+                                        <div className='text-white/80 p-1 bg-white/10 rounded-full flex-shrink-0 backdrop-blur-sm'>
+                                            {skill.icon}
+                                        </div>
+                                    </div>
+                                    <p className="text-white/90 text-sm font-medium leading-tight">
+                                        {skill.description}
+                                    </p>
+                                </div>
+
+                                {/* <div className="text-white/70 text-xs font-medium">
+                                    {skill.footerText}
+                                </div> */}
+                                
+                                <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/50 to-transparent" />
+                            </div>
+                        </div>
+                    ))}
+                    
+                    {/* Spacer pour que la dernière carte ne colle pas au bord droit lors du scroll */}
+                    <div className="w-2 flex-shrink-0"></div>
+                </div>
+            </div>
+
+            {/* Style inline pour cacher la scrollbar proprement */}
+            <style>{`
+                .hide-scrollbar::-webkit-scrollbar {
+                    display: none;
+                }
+                .hide-scrollbar {
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                }
+            `}</style>
+        </section>
+    );
+};
+
+export default Skills;
