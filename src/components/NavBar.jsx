@@ -1,5 +1,5 @@
 import React from 'react';
-import logoImg from '../assets/imgs/lewis.png';
+import logoImg from '../assets/imgs/Lewis.png';
 import Fleche from '../assets/imgs/flecheD.svg';
 
 const NavBar = () => {
