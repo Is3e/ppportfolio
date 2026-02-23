@@ -16,7 +16,6 @@ const HomePage = () => (
     <NavBar />
     <Hero />
     <About />
-    <Skills />
     <Projects />
     <Footer />
   </>

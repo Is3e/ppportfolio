@@ -1,44 +1,29 @@
 import React from 'react';
 import Aurora from './Aurora';
 import DarkVeil from './DarkVeil';
+import FishTop from '../assets/imgs/lewis-bleu.svg';
+import FishDecor from '../assets/imgs/logo.svg';
 
 const Hero = () => {
   return (
-    <>
-    <div 
-      className="hero min-h-screen relative overflow-hidden"
-      style={{ backgroundColor: '#eaeaf4' }}
-    >
-        <DarkVeil
-          hueShift={0}
-          noiseIntensity={0}
-          scanlineIntensity={0}
-          speed={0.8}
-          scanlineFrequency={0}
-          warpAmount={0}
-          resolutionScale={1}
-        />
-      <header className=" py-24 flex flex-col items-center justify-center text-center min-h-screen px-4 overflow-hidden ">
-        
-        {/* --- 3. LE TEXTE (Devant) --- */}
-        <div className="relative z-10">
-            <p className="text-xs font-semibold mix-blend-exclusion uppercase tracking-widest text-gray-300 mb-6">
-              Bonjour ! Je suis Louise Berthet
-            </p>
-            <h1 className="text-5xl font-titres mix-blend-exclusion md:text-7xl font-bold leading-tight text-gray-200 font-sans">
-              Fullstack developper<br />
-              Ux & Ui designer
-            </h1>
-        </div>
-        
-        {/* Petit tag "Projets"
-        <div className="absolute left-10 bottom-10 flex items-center gap-2 text-xs font-bold text-gray-600 z-10">
-          <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
-          Projets
-        </div> */}
-      </header>
+    <div className="relative min-h-screen overflow-hidden bg-[#7FC9AC]">
+
+      <div className="max-w-7xl mt-[7rem] flex justify-items-center px-6">
+        <h1 className="text-[6rem] mx-auto mt-10 md:text-[7rem] lg:text-[10rem] leading-[0.9] font-bold uppercase text-white tracking-tight">
+          Louise Berthet
+        </h1>
+      </div>
+
+      {/* left bottom skills list */}
+      <div className="absolute left-8 bottom-20 text-white space-y-1">
+        <p className="text-2xl flex justify-end">Ux & Ui design</p>
+        <p className="text-2xl">Developpement front end</p>
+        <p className="text-2xl">Graphisme</p>
+      </div>
+
+      {/* bottom-right decorative element */}
+      <img src={FishDecor} alt="decor" className="absolute right-12 bottom-8 w-36 opacity-90" />
     </div>
-    </>
   );
 };
 

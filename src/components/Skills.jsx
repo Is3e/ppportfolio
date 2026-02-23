@@ -29,24 +29,32 @@ const Skills = () => {
         },
         {
             id: 4,
-            title: "Base de Données",
+            title: "Branding design",
             icon: <Database size={32} />,
-            description: "Modélisation et gestion de bases de données SQL (PostgreSQL) et NoSQL (MongoDB).",
+            description: "Conception de charte garphique, identité visuelle pour renforcer la cohérence des produits.",
             imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80",
             // footerText: "Dernier projet : Oct 13, 2025"
         },
         {
             id: 5,
-            title: "Développement Mobile",
+            title: "Animation 3D",
             icon: <Smartphone size={32} />,
-            description: "Adaptation des interfaces pour le mobile first",
+            description: "Animer des sections avec du Three.js, réaliser de courtes animations avec première pro.",
+            imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80",
+            // footerText: "Dernier projet : Oct 13, 2025"
+        },
+        {
+            id: 6,
+            title: "Base de Données",
+            icon: <Database size={32} />,
+            description: "Modélisation et gestion de bases de données SQL (PostgreSQL) et NoSQL (MongoDB).",
             imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80",
             // footerText: "Dernier projet : Oct 13, 2025"
         }
     ];
 
     return (
-        <section className="py-20 bg-[#F5F3ED] border-t border-gray-200">
+        <section className="pt-5">
             <div className="max-w-7xl mx-auto px-6">
                 
                 {/* En-tête de la section */}
