@@ -1,5 +1,6 @@
 import React from 'react';
-import logoImg from '../assets/imgs/lewis-bleu.png';
+import logoImg from '../assets/imgs/lewis.png';
+import Fleche from '../assets/imgs/flecheD.svg';
 
 const NavBar = () => {
   return (
@@ -9,7 +10,7 @@ const NavBar = () => {
         {/* Logo Area */}
         <div className="flex items-center gap-2 font-bold text-lg">
           <div className="w-15 h-8 flex items-center">
-            <img src={logoImg} alt="" />
+            <img src={logoImg} alt="lewis" width={40}/>
           </div>
           {/* <span className="text-[#201A30]">Louise Berthet</span> */}
         </div>
@@ -18,7 +19,8 @@ const NavBar = () => {
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-[#22163A]">
           <a href="#projets" className="hover:text-black transition-colors">Projets</a>
           <a href="#apropos" className="hover:text-black transition-colors">A propos</a>
-          <a href="#footer" className="hover:text-black transition-colors"> Contact → </a>
+          <a href="mailto:louiseberthet2@gmail.com" className="hover:text-black transition-colors flex flex-row gap-2"> Contact </a>
+          {/* <img src={Fleche} alt="" width={10} /> */}
         </div>
       </div>
     </nav>

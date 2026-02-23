@@ -47,8 +47,8 @@ const ProjectCard = ({ id, title, catg, pitch, desc, date, image, lien, techno }
           </div>
           
           <div className='flex justify-between items-end my-8'>
-            <div>
-              <h3 className='text-gray-400 hover:text-pink-600'>Lien du projet</h3>
+            <div className='group hover:text-pink-600 transition-colors'>
+              <h3 className='text-gray-400'>Lien du projet</h3>
               <div className="text-xs font-semibold text-gray-900 hover:text-pink-600 transition-colors mt-1">
                 {lien} 
               </div>              
