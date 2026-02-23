@@ -63,7 +63,7 @@ const Skills = () => {
                         Mes domaines d'expertise
                     </h2>
                     <p className="text-gray-500">
-                        Une approche technique complète pour transformer vos idées en produits numériques performants.
+                        En 3ans de MMI, formation pluridisciplinaire, j'ai pu développer mes capacités.
                     </p>
                 </div>
 

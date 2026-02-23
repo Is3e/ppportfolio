@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import portrait from '../assets/imgs/front.JPG';
+import letterBoxd from '../assets/imgs/letterboxd.jpeg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,7 +13,7 @@ const About = () => {
   const textRef = useRef(null);
 
   // Le texte exact que tu m'as fourni (avec correction typo "éclectique")
-  const titleText = "Je m'appelle Louise et je suis une jeune développeuse éclectique et curieuse !";
+  const titleText = "Je m'appelle Louise et je suis une jeune développeuse créative, éclectique et curieuse !";
   const words = titleText.split(" ");
 
   useEffect(() => {
@@ -107,30 +108,34 @@ const About = () => {
             </div>
             
             {/* Colonne Droite Originale */}
-            <div className="text-gray-500 text-sm leading-relaxed flex flex-row gap-8 mb-10">
+            <div className="text-gray-800 text-md leading-relaxed flex flex-row gap-8 mb-10">
               <p className="text-justify">
-                Mes passions ? Le dessin, l'escalade, la photographie, le cinéma international, Readdead redemption 2.
+                Mes passions ? Le dessin, l'escalade, la photographie, le cinéma international, Readdead redemption 2, cuisiner avec mes amis et mon poisson Lewis.
               </p>
               <p className="text-justify">
                 Ma prochaine mission ? Mon stage à l'Inserm de Tours qui commence début mars et s'achevera fin juin.
               </p>
               
               {/* Stats avec ligne séparatrice
-              <div className="border-t border-gray-300 pt-6 flex justify-between items-end">
-                  <div>
-                      <span className="block text-4xl font-light text-gray-800">4 ans</span>
-                      <span className="text-xs uppercase tracking-wider font-semibold">de code</span>
-                  </div>
-                  <div className="text-right">
-                      <span className="block text-4xl font-light text-gray-800">+30</span>
-                      <span className="text-xs uppercase tracking-wider font-semibold">projets</span>
-                  </div>
+                <div className="border-t border-gray-300 pt-6 flex justify-between items-end">
+                    <div>
+                        <span className="block text-4xl font-light text-gray-800">4 ans</span>
+                        <span className="text-xs uppercase tracking-wider font-semibold">de code</span>
+                    </div>
+                    <div className="text-right">
+                        <span className="block text-4xl font-light text-gray-800">+30</span>
+                        <span className="text-xs uppercase tracking-wider font-semibold">projets</span>
+                    </div>
               </div> */}
               
             </div>
-              <button className="border border-[#7FC9AC] text-[#7FC9AC] px-6 py-3 rounded-full font-medium inline-flex items-center gap-3 hover:bg-[#A1CCBB] hover:text-white transition-colors shadow-lg shadow-pink-200/50 text-md">
-                À propos de cela... <ArrowRight size={16} />
-              </button>
+            <div className="flex flex-row gap-5">
+              <a href="https://boxd.it/aDe1L"> <img src={letterBoxd} alt="" width={45} className='rounded-full'/></a>
+              <a href="mailto:louiseberthet2@gmail.com" className="border border-[#7FC9AC] text-[#7FC9AC] px-6 py-3 rounded-full font-medium inline-flex items-center gap-3 hover:bg-[#A1CCBB] hover:text-white transition-colors shadow-lg shadow-pink-200/50 text-md">
+                Vous voulez en parler ? <ArrowRight size={16} />
+              </a>
+
+            </div>
 
           </div>
         </div>
