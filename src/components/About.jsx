@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import portrait from '../assets/imgs/front.JPG';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -75,7 +76,7 @@ const About = () => {
            <div className="absolute rounded-3xl "></div>
            
            <img 
-              src="./src/assets/imgs/front.JPG" //src\assets\imgs\front.JPG 
+              src={portrait}
               alt="Louise" 
               className="w-full h-full object-cover rounded-3xl shadow-xl "
            />
@@ -94,7 +95,7 @@ const About = () => {
           </h2>
 
           {/* Ta structure originale exacte (Bio + Stats) */}
-          <div className="original-content grid md:grid-cols-2 gap-10 items-start">
+          <div className="original-content items-start">
             
             {/* Colonne Gauche Originale */}
             <div>
@@ -102,21 +103,19 @@ const About = () => {
                 Actuellement en dernière année de <strong className="font-bold text-gray-900">Bachelor Universitaire Métiers du Multimédia et de l'Internet</strong>, je suis une jeune développeuse web créative. 
                 Ces trois dernières années, je me suis spécialisée dans le domaine du développement web en intégrant le parcours éponyme au BUT de Blois, de la conception de wireframes, à leur développement puis leur déploiement en ligne. J’ai également des bases en structures réseaux.
               </p>
-              <button className="border border-[#7FC9AC] text-[#7FC9AC] px-6 py-3 rounded-full font-medium inline-flex items-center gap-3 hover:bg-[#A1CCBB] hover:text-white transition-colors shadow-lg shadow-pink-200/50 text-md">
-                À propos de cela... <ArrowRight size={16} />
-              </button>
+              
             </div>
             
             {/* Colonne Droite Originale */}
-            <div className="text-gray-500 text-sm leading-relaxed">
-              <p className="mb-8 text-justify">
-                Mes passions ? Marcher et la photographie, le dessin, le cinéma international, Readdead redemption 2
+            <div className="text-gray-500 text-sm leading-relaxed flex flex-row gap-8 mb-10">
+              <p className="text-justify">
+                Mes passions ? Le dessin, l'escalade, la photographie, le cinéma international, Readdead redemption 2.
               </p>
-              <p className="mb-12 text-justify">
-                Mon prochain projet ? Mon stage à de début Mars à fin Juin.
+              <p className="text-justify">
+                Ma prochaine mission ? Mon stage à l'Inserm de Tours qui commence début mars et s'achevera fin juin.
               </p>
               
-              {/* Stats avec ligne séparatrice */}
+              {/* Stats avec ligne séparatrice
               <div className="border-t border-gray-300 pt-6 flex justify-between items-end">
                   <div>
                       <span className="block text-4xl font-light text-gray-800">4 ans</span>
@@ -126,8 +125,12 @@ const About = () => {
                       <span className="block text-4xl font-light text-gray-800">+30</span>
                       <span className="text-xs uppercase tracking-wider font-semibold">projets</span>
                   </div>
-              </div>
+              </div> */}
+              
             </div>
+              <button className="border border-[#7FC9AC] text-[#7FC9AC] px-6 py-3 rounded-full font-medium inline-flex items-center gap-3 hover:bg-[#A1CCBB] hover:text-white transition-colors shadow-lg shadow-pink-200/50 text-md">
+                À propos de cela... <ArrowRight size={16} />
+              </button>
 
           </div>
         </div>

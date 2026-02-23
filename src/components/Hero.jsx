@@ -6,18 +6,9 @@ const Hero = () => {
   return (
     <>
     <div 
-      className="hero min-h-screen relative overflow-hidden"
-      style={{ backgroundColor: '#eaeaf4' }}
+      className="hero min-h-screen relative overflow-hidden bg-[#7FC9AC]"
     >
-        <DarkVeil
-          hueShift={0}
-          noiseIntensity={0}
-          scanlineIntensity={0}
-          speed={0.8}
-          scanlineFrequency={0}
-          warpAmount={0}
-          resolutionScale={1}
-        />
+      
       <header className=" py-24 flex flex-col items-center justify-center text-center min-h-screen px-4 overflow-hidden ">
         
         {/* --- 3. LE TEXTE (Devant) --- */}

@@ -16,9 +16,7 @@ const HomePage = () => (
     <NavBar />
     <Hero />
     <About />
-    <Skills />
     <Projects />
-    <Footer />
   </>
 );
 
@@ -31,6 +29,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/project/:id" element={<DetailProjet />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
