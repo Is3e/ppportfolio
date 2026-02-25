@@ -2,7 +2,7 @@ import React from 'react';
 import Aurora from './Aurora';
 import DarkVeil from './DarkVeil';
 import FishTop from '../assets/imgs/lewis-bleu.svg';
-import FishDecor from '../assets/imgs/lewis.svg';
+import FishDecor from '../assets/imgs/Lewis.svg';
 
 const Hero = () => {
   return (
