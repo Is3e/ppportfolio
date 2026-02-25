@@ -1,15 +1,19 @@
 import React from 'react';
 import BentoGallery from './BentoGallery';
 import { projectsData } from '../data/ProjectsData';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 
 const DetailProjet = () => {
     const { id } = useParams(); // Récupère "1"
     const project = projectsData.find(p => p.id === parseInt(id)); // Trouve le projet ID 1 dans la liste
+    const navigate = useNavigate();
+    const projectIndex = projectsData.findIndex(p => p.id === parseInt(id));
+    const prevProject = projectsData[projectIndex - 1];
+    const nextProject = projectsData[projectIndex + 1];
 
     return (
         <div className='relative'>
-            <aside className='fixed top-0 left-0 h-screen overflow-auto w-1/2 px-8 py-10'>
+            <aside className='md:fixed md:top-0 md:left-0 md:h-screen md:overflow-auto md:w-1/2 md:px-8 md:py-10 w-full relative px-4 py-8 hide-scrollbar'>
                 <div className='max-w-[720px] justify-between '>
 
                     <Link to="/" className="text-sm text-gray-600 mb-4 inline-block">&lt; Back</Link>
@@ -32,7 +36,7 @@ const DetailProjet = () => {
                     </div>
                 
                     <div className='mb-6 text-gray-700'>
-                        <p className='text-2xl'> 
+                        <p className='text-2xl mb-5 '> 
                             {project.pitch}
                         </p>
 
@@ -41,30 +45,47 @@ const DetailProjet = () => {
                         </p>
                         
                         <div className='flex my-8 text-1xl gap-6 mb-8'>
-                            <a href='#' className='underline'>lien github</a>
-                            <a href='#' className='underline'>lien figma ?</a>
+                            <a href={project.lien} className='underline'>lien vers le projet</a>
                         </div>
                     </div>
                     
                     <div className='flex mt-5 justify-between'>
-                        <button className='px-4 py-2 border border-gray-400 rounded-full'>&lt;- Projet précédent</button>
-                        <button className='px-4 py-2 border border-gray-400 rounded-full'>Projet suivant -&gt;</button>
+                        {prevProject ? (
+                            <button
+                                onClick={() => navigate(`/project/${prevProject.id}`)}
+                                className='px-4 py-2 border border-gray-400 rounded-full'
+                            >&lt;- Projet précédent</button>
+                        ) : (
+                            <div />
+                        )}
+
+                        {nextProject ? (
+                            <button
+                                onClick={() => navigate(`/project/${nextProject.id}`)}
+                                className='px-4 py-2 border border-gray-400 rounded-full'
+                            >Projet suivant -&gt;</button>
+                        ) : (
+                            <div />
+                        )}
                     </div>
                 </div>
             </aside>
-            <main className='images ml-[50%] h-screen'>
-                <div className='min-h-screen'>
+            <main className='images md:ml-[50%] ml-0 md:h-screen h-auto'>
+                <div className='min-h-screen md:min-h-0'>
                     {/* Tu passes tes images ici */}
-                    <BentoGallery 
-                        images={[
-                            "https://url-image-grande-1.jpg",
-                            "https://url-image-petite-2.jpg",
-                            "https://url-image-petite-3.jpg",
-                            "https://url-image-grande-4.jpg"
-                        ]} 
-                    />
+                    <BentoGallery />
                 </div>
             </main>
+
+            <style>{`
+                .hide-scrollbar::-webkit-scrollbar {
+                    display: none;
+                }
+                .hide-scrollbar {
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                }
+            `}</style>
         </div>
     );
 };

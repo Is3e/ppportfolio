@@ -1,20 +1,35 @@
 import planchePictos from '../assets/imgs/planche-pictogrammes.png';
+
+// import frontFrameUp from '../assets/imgs/landing-frameup.png';
 import landingF from "../assets/imgs/landing-frameup.png";
+import imgEvolve1 from '../assets/imgs/MockupEvolve.png';
+import aboutF from '../assets/imgs/sectionAPropos.png';
+import offreF from '../assets/imgs/sectionOffres.png';
+import figma from '../assets/imgs/FigmaWorkflowFrameUp.png';
+
+// import imgAPI from '../assets/imgs/';
+// import imgNode from '../assets/imgs/';
+
+
+// import imgJaipur1 from '../assets/imgs/';
+// import imgJaipur2 from '../assets/imgs/';
+// import imgJaipur3 from '../assets/imgs/';
+
 
 export const projectsData = [
     { 
       id: 1, 
       title: "FrameUp", 
       pitch:"Un CMS complet en ligne avec  un système de blogs.",
-      desc: " ",
+      desc: "Dans le cadre de cette SAÉ, l'enjeu était de concevoir un produit numérique complet, capable de s'adapter aux standards du marché tout en proposant une réelle innovation. La question centrale était : comment structurer une application web évolutive et performante tout en bâtissant une stratégie entrepreneuriale cohérente autour d'elle ? Conception UI/UX et Stratégie (Figma) : En tant que responsable du Front-End, j'ai commencé le projet par une phase de conception avancée sur Figma. J'ai réalisé l'intégralité du prototypage, définissant un design système cohérent qui assure une expérience utilisateur fluide et moderne. Cette étape a été cruciale pour anticiper les problématiques d'ergonomie et d'accessibilité avant d'entamer la phase technique. J'ai également élaboré la structure de promotion du produit (identité de marque et positionnement), en intégrant une dimension internationale avec des contenus entièrement gérés en anglais. Développement Front-End et Innovation (React & Three.js) : Le cœur de ma mission a été de transformer cette vision créative en une plateforme robuste et interactive. Expertise technique : J'ai développé une Single Page Application (SPA) sous React, utilisant Tailwind CSS (Daisy UI) pour une intégration rapide et modulaire. Immersion 3D : Pour différencier le produit des CMS classiques comme WordPress, j'ai intégré la bibliothèque Three.js. Cela m'a permis d'ajouter des composants interactifs en 3D, rendant l'interface plus immersive et démontrant ma capacité à manipuler des technologies innovantes. Rigueur et Pilotage : Au-delà du code, j'ai piloté le projet en intégrant des pratiques de DevOps pour l'automatisation du déploiement et de la maintenance. Une attention particulière a été portée à l'accessibilité numérique (RGAA) et à l'éco-conception, afin de livrer un produit non seulement performant et sécurisé, mais aussi responsable. Ce projet confirme ma capacité à gérer un cycle de production complexe, de la première esquisse sur Figma jusqu'à la mise en ligne d'une application techniquement aboutie.",
       catg: "Dev front end", 
       date: "1 mois", 
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: landingF,
       traces_projet: [
-        landingF,
-        "../assets/imgs/landing-evolve.png", 
-        "", 
-        ""
+        imgEvolve1,
+        aboutF,
+        offreF, 
+        figma
       ],
       techno : [ 'React', 'symfony', 'Tailwind', 'Daisy ui', 'Gsap'  ],
       titre_lien : "FrameUp - vercel",
@@ -60,7 +75,7 @@ export const projectsData = [
       id: 4, 
       title: "Pictogrames de Jaipur", 
       pitch:"Et si on voyagais avec des pictos ? ",
-      desc: "Ce projet a été réalisé en première année dans un cours d'expression d'artistique afin de prendre en main la suite adobe, et plus particulièrement Illustrator",
+      desc: "Ce projet a été réalisé en première année dans un cours d'expression d'artistique afin de prendre en main la suite adobe, et plus particulièrement Illustrator. Réalisé en binôme, notre projet de pictogramme est porté sur la ville de Jaipur, capitale de l’Etat du Rajasthan en Inde. Elle est surnommée ‘the pink city’ de par la teinte rose orangé, proche du pink fuzz, d’une majorité de bâtiments historique, c’est donc pour cette raison que nous avons opté pour des pictogrammes de cette couleur. La seconde couleur présente sur les pictogrammes est une sorte de bleu outremer que l’on peut retrouver dans les couloirs du palais emblématique de la ville. Sur tous les pictogrammes, on peut retrouver une accolade revisitée qui est censée rappeler les arcs présents sur les architectures indiennes. Les traçés ainsi que les angles sont arrondis pour garder une cohérence avec le style indien, observé lors de nos veilles graphiques. Toujours dans cette optique, nous avons choisi une graisse de tracé assez fine et une typographie linéale afin de faciliter la lecture et la rendre agréable.",
       catg: "Data Visualisation",
       date: "1ère année de MMI",  
       image: planchePictos,

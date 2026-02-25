@@ -33,25 +33,14 @@ const BentoGallery = () => {
            )}
         </div>
 
-        {/* 2. Petit rectangle (Bas Gauche) */}
-        <div className="relative h-40 md:h-48 rounded-2xl overflow-hidden bg-gray-200">
-           {imas[1] && (
-             <img 
-               src={imas[1]} 
-               alt="Gallery 2" 
-               className="w-full h-full object-cover" 
-             />
-           )}
-        </div>
-
       </div>
 
       {/* --- COLONNE DROITE --- */}
       <div className="flex flex-col gap-4">
         
         {/* 3. Petit rectangle (Haut Droite) */}
-        <div className="relative h-40 md:h-48 rounded-2xl overflow-hidden bg-gray-200">
-           {imas[2] && (
+        <div className="relative h-60 md:h-75 rounded-2xl overflow-hidden bg-gray-200">
+           {imas[1] && (
              <img 
                src={imas[2]} 
                alt="Gallery 3" 
@@ -61,11 +50,22 @@ const BentoGallery = () => {
         </div>
 
         {/* 4. Grand rectangle (Bas Droite) */}
-        <div className="relative h-80 md:h-96 rounded-2xl overflow-hidden bg-gray-200">
-           {imas[3] && (
+        <div className="relative h-80 md:h-100 rounded-2xl overflow-hidden bg-gray-200">
+           {imas[2] && (
              <img 
                src={imas[3]} 
                alt="Gallery 4" 
+               className="w-full h-full object-cover" 
+             />
+           )}
+        </div>
+
+        {/* 2. Petit rectangle (Bas Gauche) */}
+        <div className="relative h-40 md:h-48 rounded-2xl overflow-hidden bg-gray-200">
+           {imas[3] && (
+             <img 
+               src={imas[1]} 
+               alt="Gallery 2" 
                className="w-full h-full object-cover" 
              />
            )}
