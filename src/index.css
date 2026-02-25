@@ -8,57 +8,7 @@
   themes: light --default, dark --prefersdark;
 }
 
-/* 1. REGULAR (Poids 400) */
-@font-face {
-  font-family: 'TT Firs Neue';
-  src: url('/assets/fonts/TT-Firs-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
 
-/* 2. ITALIC (Poids 400 + Italic) */
-@font-face {
-  font-family: 'TT Firs Neue';
-  src: url('/assets/fonts/TT-Firs-Italic.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic;
-}
-
-/* 3. MEDIUM (Poids 500) */
-@font-face {
-  font-family: 'TT Firs Neue';
-  src: url('/assets/fonts/TT-Firs-Medium.ttf') format('truetype');
-  font-weight: 500; /* C'est ici qu'on map le fichier Medium au poids 500 */
-  font-style: normal;
-}
-
-/* 4. BOLD (Poids 700) */
-@font-face {
-  font-family: 'TT Firs Neue';
-  src: url('/assets/fonts/TT-Firs-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
-
-/* 5. BOLD ITALIC (Poids 700 + Italic) */
-@font-face {
-  font-family: 'TT Firs Neue';
-  src: url('/assets/fonts/TT-Firs-BoldItalic.ttf') format('truetype');
-  font-weight: 700;
-  font-style: italic;
-}
-
-/* --- 2. La Configuration du Thème --- */
-@theme {
-  /* On redéfinit la variable --font-sans pour utiliser ta police */
-  --font-titres: "TT Firs Neue", ui-sans-serif, system-ui, sans-serif;
-}
-
-@layer base {
-  h1, h2, h3, h4 {
-    font-family: var(--font-titres);
-  }
-}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

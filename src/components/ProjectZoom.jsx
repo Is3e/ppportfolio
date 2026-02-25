@@ -9,14 +9,14 @@ const ProjectZoom = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-10">
-      <h1 className='text-3xl font-titre font-bold text-[#070E34]'>{project.title}</h1>
+      <h1 className='text-3xl font-bold text-[#070E34]'>{project.title}</h1>
       <p className="mb-8">{project.desc}</p>
       
       {/* --- NOUVEAU : SECTION STACK TECHNIQUE --- */}
         {/* On vérifie d'abord si project.techno existe et s'il n'est pas vide */}
         {project.techno && project.techno.length > 0 && (
           <div className="mb-10">
-              <h3 className="font-titre text-xl font-bold mb-4 text-gray-900">Technologies utilisées</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-900">Technologies utilisées</h3>
               <div className="flex flex-wrap gap-3">
                 {project.techno.map((tech, index) => (
                   <span 

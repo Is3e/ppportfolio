@@ -6,16 +6,16 @@ import FishDecor from '../assets/imgs/Lewis.svg';
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[#7FC9AC]">
+    <div className="relative min-h-screen overflow-hidden bg-[#7FC9AC] flex justify-center ">
 
-      <div className="max-w-7xl mt-[7rem] flex justify-items-center px-6">
-        <h1 className="text-[6rem] mx-auto mt-10 md:text-[7rem] lg:text-[10rem] leading-[0.9] font-bold uppercase text-white tracking-tight">
+      <div className="mt-[7rem] text-center px-6">
+        <h1 className="text-[6rem] mx-auto mt-10 md:text-[7rem] lg:text-[10rem] leading-[0.9] font-bold uppercase tracking-tight">
           Louise Berthet
         </h1>
       </div>
 
       {/* left bottom skills list */}
-      <div className="absolute left-8 bottom-20 text-white space-y-1">
+      <div className="absolute left-8 bottom-20 space-y-1">
         <p className="text-2xl flex justify-end">Ux & Ui design</p>
         <p className="text-2xl">Developpement front end</p>
         <p className="text-2xl">Graphisme</p>

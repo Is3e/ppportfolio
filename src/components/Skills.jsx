@@ -59,7 +59,7 @@ const Skills = () => {
                 
                 {/* En-tête de la section */}
                 <div className="mb-12 max-w-2xl">
-                    <h2 className="font-titre text-5xl font-bold text-gray-900 mb-4">
+                    <h2 className="text-5xl font-bold text-gray-900 mb-4">
                         Mes domaines d'expertise
                     </h2>
                     <p className="text-gray-500">

@@ -87,7 +87,7 @@ const About = () => {
         <div ref={textRef}>
           
           {/* Ton H2 Animé */}
-          <h2 className="text-xl md:text-3xl font-titre font-bold mb-12 leading-tight flex flex-wrap gap-x-2">
+          <h2 className="text-xl md:text-3xl font-bold mb-12 leading-tight flex flex-wrap gap-x-2">
             {words.map((word, index) => (
               <span key={index} className="title-word inline-block origin-bottom-left text-gray-900">
                 {word}
@@ -100,7 +100,7 @@ const About = () => {
             
             {/* Colonne Gauche Originale */}
             <div>
-              <p className="text-gray-600 text-md leading-relaxed mb-8 text-justify">
+              <p className="text-gray-900 text-md leading-relaxed mb-8 text-justify">
                 Actuellement en dernière année de <strong className="font-bold text-gray-900">Bachelor Universitaire Métiers du Multimédia et de l'Internet</strong>, je suis une jeune développeuse web créative. 
                 Ces trois dernières années, je me suis spécialisée dans le domaine du développement web en intégrant le parcours éponyme au BUT de Blois, de la conception de wireframes, à leur développement puis leur déploiement en ligne. J’ai également des bases en structures réseaux.
               </p>
@@ -108,25 +108,13 @@ const About = () => {
             </div>
             
             {/* Colonne Droite Originale */}
-            <div className="text-gray-800 text-md leading-relaxed flex flex-row gap-8 mb-10">
+            <div className="text-gray-600 text-md leading-relaxed flex flex-row gap-8 mb-10">
               <p className="text-justify">
-                Mes passions ? Le dessin, l'escalade, la photographie, le cinéma international, Readdead redemption 2, cuisiner avec mes amis et mon poisson Lewis.
+                Mes <span className='bg-[#FCE3EF] font-bold'>passions</span> ? Le dessin, l'escalade, la photographie, la musique et le cinéma international, ReadDead Redemption 2, cuisiner avec mes amis et mon poisson Lewis.
               </p>
               <p className="text-justify">
-                Ma prochaine mission ? Mon stage à l'Inserm de Tours qui commence début mars et s'achevera fin juin.
+                Ma <span className='bg-[#FCE3EF] font-bold'>prochaine mission</span> ? Mon stage à l'Inserm de Tours qui commence début mars et s'achevera fin juin.
               </p>
-              
-              {/* Stats avec ligne séparatrice
-                <div className="border-t border-gray-300 pt-6 flex justify-between items-end">
-                    <div>
-                        <span className="block text-4xl font-light text-gray-800">4 ans</span>
-                        <span className="text-xs uppercase tracking-wider font-semibold">de code</span>
-                    </div>
-                    <div className="text-right">
-                        <span className="block text-4xl font-light text-gray-800">+30</span>
-                        <span className="text-xs uppercase tracking-wider font-semibold">projets</span>
-                    </div>
-              </div> */}
               
             </div>
             <div className="flex flex-row gap-5">

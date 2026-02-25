@@ -5,21 +5,19 @@ import Logo from '../assets/imgs/lewis-bleu.svg';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#070E34] text-white w-full">
+    <footer className="bg-[#340717] text-white w-full">
       <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row justify-between items-start py-12 px-6">
 
-        {/* Left column: logo + anchors */}
+        {/* colonne gauche: logo + ancres */}
         <div className="flex sm:flex-row md:flex-col gap-6 md:items-start">
-          <img src={Logo} alt="logo" className="w-9" />
           <nav className="flex sm:flex-row md:flex-col gap-4 text-md font-medium">
             <a href="#projets" className="hover:text-[#E94078] mix-blend-difference transition-colors text-2xl">Projets</a>
             <a href="#apropos" className="hover:text-[#E94078] mix-blend-difference transition-colors text-2xl">About</a>
             <a href="#contact" className="hover:text-[#E94078] mix-blend-difference transition-colors text-2xl">Contact</a>
           </nav>
-          <p className="mt-6 hidden md:block mix-blend-difference">@ {new Date().getFullYear()} - Louise Berthet</p>
         </div>
 
-        {/* Right column: contact points */}
+        {/* colonne droite: contact points */}
         <div className="flex flex-col items-end gap-4 pt-10 md:pt-0 sm:text-1xl md:text-2xl ms-28 md:ml-8">
 
           <a href="https://github.com/Is3e" target="_blank" rel="noopener noreferrer" className="hover:text-[#E94078] mix-blend-difference underline underline-offset-6 transition-colors flex items-center gap-3 " aria-label="Github">
@@ -39,7 +37,12 @@ const Footer = () => {
         </div>
       </div> 
 
-      <p className="mt-6 sm:block md:hidden mix-blend-difference">@ {new Date().getFullYear()} - Louise Berthet</p>
+      <div className='flex flex-row justify-between max-w-7xl mx-auto pb-5 px-6'>
+        <img src={Logo} alt="logo" className="w-9" />
+        <p className="pb-2 mix-blend-difference">@ {new Date().getFullYear()} - Louise Berthet</p>
+      </div>
+
+
     </footer>
   );
 };

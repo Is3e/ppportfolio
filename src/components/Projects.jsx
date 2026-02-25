@@ -8,7 +8,7 @@ const Projects = () => {
     <>
     <Skills />
     <section id="projets" className="max-w-7xl mx-auto px-6 py-24">
-      <h2 className="text-6xl font-titre font-bold text-[#070E34] mb-8">
+      <h2 className="text-6xl font-bold text-[#070E34] mb-8">
         Mes derniers projets
       </h2>
       
