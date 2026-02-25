@@ -6,41 +6,40 @@ import Logo from '../assets/imgs/lewis-bleu.svg';
 const Footer = () => {
   return (
     <footer className="bg-[#070E34] text-white w-full">
-      <div className="max-w-7xl mx-auto w-full flex justify-between items-start py-12 px-6">
+      <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row justify-between items-start py-12 px-6">
 
         {/* Left column: logo + anchors */}
-        <div className="flex flex-col gap-6">
+        <div className="flex sm:flex-row md:flex-col gap-6 md:items-start">
           <img src={Logo} alt="logo" className="w-9" />
-          <nav className="flex flex-col gap-4 text-md font-medium">
+          <nav className="flex sm:flex-row md:flex-col gap-4 text-md font-medium">
             <a href="#projets" className="hover:text-[#E94078] mix-blend-difference transition-colors text-2xl">Projets</a>
             <a href="#apropos" className="hover:text-[#E94078] mix-blend-difference transition-colors text-2xl">About</a>
             <a href="#contact" className="hover:text-[#E94078] mix-blend-difference transition-colors text-2xl">Contact</a>
           </nav>
-          <p className="mt-6  mix-blend-difference">@ {new Date().getFullYear()} - Louise Berthet</p>
+          <p className="mt-6 hidden md:block mix-blend-difference">@ {new Date().getFullYear()} - Louise Berthet</p>
         </div>
 
-        {/* Center spacer (keeps layout similar to image) */}
-        <div className="flex-1" />
-
         {/* Right column: contact points */}
-        <div className="flex flex-col items-end gap-4 pt-10">
+        <div className="flex flex-col items-end gap-4 pt-10 md:pt-0 sm:text-1xl md:text-2xl ms-28 md:ml-8">
 
-          <a href="https://github.com/Is3e" target="_blank" rel="noopener noreferrer" className="hover:text-[#E94078] mix-blend-difference underline underline-offset-6 transition-colors flex items-center gap-3 text-2xl" aria-label="Github">
+          <a href="https://github.com/Is3e" target="_blank" rel="noopener noreferrer" className="hover:text-[#E94078] mix-blend-difference underline underline-offset-6 transition-colors flex items-center gap-3 " aria-label="Github">
             Github - Is3
             <img src={Fleche} alt="" width={18} />
           </a>
 
-          <a href="https://www.linkedin.com/in/louise-berthet/" target="_blank" rel="noopener noreferrer" className="hover:text-[#E94078] mix-blend-difference underline underline-offset-6 transition-colors flex items-center gap-3 text-2xl" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/louise-berthet/" target="_blank" rel="noopener noreferrer" className="hover:text-[#E94078] mix-blend-difference underline underline-offset-6 transition-colors flex items-center gap-3 " aria-label="LinkedIn">
             LinkedIn - Louise Berthet
             <img src={Fleche} alt="" width={18} />
           </a>
 
-          <a href="mailto:louiseberthet2@gmail.com" className="hover:text-[#E94078] mix-blend-difference underline underline-offset-6 transition-colors flex items-center gap-3 text-2xl" aria-label="Email">
+          <a href="mailto:louiseberthet2@gmail.com" className="hover:text-[#E94078] mix-blend-difference underline underline-offset-6 transition-colors flex items-center gap-3 " aria-label="Email">
             Mail - louiseberthet2@gmail.com
             <img src={Fleche} alt="" width={18} />
           </a>
         </div>
-      </div>
+      </div> 
+
+      <p className="mt-6 sm:block md:hidden mix-blend-difference">@ {new Date().getFullYear()} - Louise Berthet</p>
     </footer>
   );
 };

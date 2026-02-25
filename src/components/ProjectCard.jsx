@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ProjectCard = ({ id, title, catg, pitch, desc, date, image, lien, techno }) => {
+const ProjectCard = ({ id, title, catg, pitch, desc, titre_lien, date, image, lien, techno }) => {
   const catgName = typeof catg === 'object' ? catg?.name : catg;
 
   return (
@@ -47,12 +47,18 @@ const ProjectCard = ({ id, title, catg, pitch, desc, date, image, lien, techno }
           </div>
           
           <div className='flex justify-between items-end my-8'>
-            <div className='group hover:text-pink-600 transition-colors'>
-              <h3 className='text-gray-400'>Lien du projet</h3>
-              <div className="text-xs font-semibold text-gray-900 hover:text-pink-600 transition-colors mt-1">
-                {lien} 
-              </div>              
-            </div>
+            {lien && typeof lien === 'string' && lien.trim() !== '' && (
+              <div className='group hover:text-pink-600 transition-colors'>
+                <h3 className='text-gray-400'>Lien du projet</h3>
+                <button
+                  type="button"
+                  onClick={() => lien && window.open(lien, '_blank', 'noopener,noreferrer')}
+                  className="text-xs font-semibold text-gray-900 hover:text-pink-600 transition-colors mt-1"
+                >
+                  {titre_lien}
+                </button>
+              </div>
+            )}
 
             {/* <div>
               <h3 className='text-gray-400'>Date de fin</h3>

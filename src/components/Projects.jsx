@@ -12,12 +12,12 @@ const Projects = () => {
         Mes derniers projets
       </h2>
       
-      {/* Grille responsive : 1 col sur mobile, 2 sur tablette/desktop */}
+      
       <div className="flex flex-col pb-2">
         {projectsData.map((project) => (
           <ProjectCard 
             key={project.id} 
-            {...project} //concaténation des datas
+            {...project} //concat des datas
           />
         ))}
       </div>

@@ -40,6 +40,14 @@ const ProjectZoom = () => {
                 "https://url-image-grande-4.jpg"
             ]} 
         />
+        {/* <BentoGallery 
+            images={[
+                "https://url-image-grande-1.jpg",
+                "https://url-image-petite-2.jpg",
+                "https://url-image-petite-3.jpg",
+                "https://url-image-grande-4.jpg"
+            ]} 
+        /> */}
         </div>
 
       <Link to="/" className="bg-pink-500 text-white px-6 py-3 rounded-full hover:bg-pink-600 transition">
