@@ -22,7 +22,7 @@ const Hero = () => {
       </div>
 
       {/* bottom-right decorative element */}
-      <img src={FishDecor} alt="decor" className="absolute right-12 bottom-20 w-36 opacity-90" />
+      <img src={FishDecor} alt="decor" className="absolute hidden md:block right-12 bottom-20 w-36 opacity-90" />
     </div>
   );
 };

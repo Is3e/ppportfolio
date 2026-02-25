@@ -108,7 +108,7 @@ const About = () => {
             </div>
             
             {/* Colonne Droite Originale */}
-            <div className="text-gray-600 text-md leading-relaxed flex flex-row gap-8 mb-10">
+            <div className="text-gray-600 text-md leading-relaxed flex flex-col md:flex-row gap-8 mb-10">
               <p className="text-justify">
                 Mes <span className='bg-[#FCE3EF] font-bold'>passions</span> ? Le dessin, l'escalade, la photographie, la musique et le cinéma international, ReadDead Redemption 2, cuisiner avec mes amis et mon poisson Lewis.
               </p>

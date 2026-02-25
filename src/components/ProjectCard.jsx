@@ -10,13 +10,13 @@ const ProjectCard = ({ id, title, catg, pitch, desc, titre_lien, date, image, li
       className="w-full bg-white overflow-hidden shadow-md hover:shadow-lg shadow-pink-200/50 transition-all duration-300 transform hover:-translate-y-1"
     >
       {/* grid md:grid-cols-5  */}
-      <div className="sm:flex h-4xl ">
-        {/* Image à gauche */}
-        <div className="w-3xl h-3xl sm:flex-shrink-0">
+      <div className="flex flex-col sm:flex-row sm:h-4xl">
+        {/* Image: full-width on mobile (centered), fixed-size on sm+ to keep original layout */}
+        <div className="w-full sm:w-3xl h-64 sm:h-auto sm:flex-shrink-0 mx-auto sm:mx-0">
           <img 
             src={image}
             alt={title} 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
         </div>
 
@@ -33,13 +33,6 @@ const ProjectCard = ({ id, title, catg, pitch, desc, titre_lien, date, image, li
                 </span>
               )} */}
             </div>
-
-            {/* <div className="flex items-center gap-1.5 mb-2">
-              <div className="w-1.5 h-1.5 bg-pink-500 rounded-full"></div>
-              <span className="text-pink-600 text-[10px] font-bold uppercase tracking-wide">
-                {catgName || "Projet"}
-              </span>
-            </div> */}
             
             <p className="text-medium text-gray-500 line-clamp-2 leading-relaxed">
               {pitch}
@@ -59,13 +52,6 @@ const ProjectCard = ({ id, title, catg, pitch, desc, titre_lien, date, image, li
                 </button>
               </div>
             )}
-
-            {/* <div>
-              <h3 className='text-gray-400'>Date de fin</h3>
-              <div className="text-xs font-semibold text-gray-900 transition-colors mt-1">
-                {date}
-              </div>
-            </div> */}
 
             <div>
               <h3 className='text-gray-400 flex justify-end'>Technos utilisées</h3>
