@@ -30,9 +30,9 @@ const DetailProjet = () => {
                                 </span>
                             ))}
                         </div>
-                        <div>
+                        {/* <div>
                             <p>{project.date}</p>
-                        </div>
+                        </div> */}
                     </div>
                 
                     <div className='mb-6 text-gray-700'>

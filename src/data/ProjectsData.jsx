@@ -1,4 +1,4 @@
-import planchePictos from '../assets/imgs/planche-pictogrammes.png';
+
 
 // import frontFrameUp from '../assets/imgs/landing-frameup.png';
 import landingF from "../assets/imgs/landing-frameup.png";
@@ -10,9 +10,9 @@ import figma from '../assets/imgs/FigmaWorkflowFrameUp.png';
 // import imgAPI from '../assets/imgs/';
 // import imgNode from '../assets/imgs/';
 
-
-// import imgJaipur1 from '../assets/imgs/';
-// import imgJaipur2 from '../assets/imgs/';
+import planchePictos from '../assets/imgs/planche-pictogrammes.png';
+import imgJaipur1 from '../assets/imgs/pictosMockup0.png';
+import imgJaipur2 from '../assets/imgs/pictosMockup1.png';
 // import imgJaipur3 from '../assets/imgs/';
 
 
@@ -79,11 +79,10 @@ export const projectsData = [
       catg: "Data Visualisation",
       date: "1ère année de MMI",  
       image: planchePictos,
-      traces_projet: [
-        "../assets/imgs/landing-frameup.png",
-        "../assets/imgs/landing-evolve.png", 
-        "", 
-        ""
+      traces_projet: [ 
+        planchePictos,
+        imgJaipur1, 
+        imgJaipur2 
       ],
       techno : [ 'Adobe Illustrator'  ],
       titre_lien : " ",
