@@ -1,19 +1,25 @@
-
-
-// import frontFrameUp from '../assets/imgs/landing-frameup.png';
+// imgs frontFrameUp 
 import landingF from "../assets/imgs/landing-frameup.png";
 import imgEvolve1 from '../assets/imgs/MockupEvolve.png';
 import aboutF from '../assets/imgs/sectionAPropos.png';
 import offreF from '../assets/imgs/sectionOffres.png';
 import figma from '../assets/imgs/FigmaWorkflowFrameUp.png';
 
-// import imgAPI from '../assets/imgs/';
-// import imgNode from '../assets/imgs/';
-
+// imgs Jaipur
 import planchePictos from '../assets/imgs/planche-pictogrammes.png';
 import imgJaipur1 from '../assets/imgs/pictosMockup0.png';
 import imgJaipur2 from '../assets/imgs/pictosMockup1.png';
-// import imgJaipur3 from '../assets/imgs/';
+
+// imgs API 
+import API1 from "../assets/imgs/api-galerie-landing.png";
+import API2 from "../assets/imgs/api-code.png";
+import API3 from "../assets/imgs/api-card.png";
+
+// imgs APORE
+import apore1 from "../assets/imgs/APORE_frontpage.png" ;
+import apore2 from "../assets/imgs/APORE_figma_intercalaires.png";
+import apore3 from "../assets/imgs/APORE_fiche_produit.png";
+import apore4 from "../assets/imgs/APORE_configurateur.png";
 
 
 export const projectsData = [
@@ -43,11 +49,7 @@ export const projectsData = [
       catg: "Web Design",
       date: "Janvier 2026",  
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      traces_projet: [
-        "../src/assets/imgs/api-galerie-landing.png", 
-        "../src/assets/imgs/api-code.png",
-        "../src/assets/imgs/api-card.png"
-      ],
+      traces_projet: [ API1, API2, API3 ],
       techno : [ 'Node.js', 'React', 'Tailwind' ],
       titre_lien : "Galerie d’art interractive - render",
       lien : "https://galerie-art-front.onrender.com/"
@@ -60,12 +62,7 @@ export const projectsData = [
       catg: "Stage de 2ème année", 
       date: "1 mois", 
       image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      traces_projet: [ 
-        "../src/assets/imgs/APORE_frontpage.png",
-        "../src/assets/imgs/APORE_figma_intercalaires.png",
-        "../src/assets/imgs/APORE_fiche_produit.png",
-        "../src/assets/imgs/APORE_configurateur.png"
-      ],
+      traces_projet: [ apore1, apore2, apore3, apore4 ],
       techno : [ 'Bootstrap', 'HTML', 'PHP', 'WordPress' ],
       titre_lien : "site APORE",
       lien : "https://apore.fr"
@@ -78,11 +75,7 @@ export const projectsData = [
       catg: "Data Visualisation",
       date: "1ère année de MMI",  
       image: planchePictos,
-      traces_projet: [ 
-        planchePictos,
-        imgJaipur1, 
-        imgJaipur2 
-      ],
+      traces_projet: [ planchePictos, imgJaipur1, imgJaipur2 ],
       techno : [ 'Adobe Illustrator'  ],
       titre_lien : " ",
       lien : " "
