@@ -37,7 +37,7 @@ export const projectsData = [
         offreF, 
         figma
       ],
-      techno : [ 'React', 'symfony', 'Tailwind', 'Daisy ui', 'Gsap'  ],
+      techno : [ 'React', 'Symfony', 'Tailwind', 'Gsap'  ],
       titre_lien : "FrameUp - vercel",
       lien : "https://cms-frontoffice.vercel.app/presentation"
     },
@@ -64,7 +64,7 @@ export const projectsData = [
       image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       traces_projet: [ apore1, apore2, apore3, apore4 ],
       techno : [ 'Bootstrap', 'HTML', 'PHP', 'WordPress' ],
-      titre_lien : "site APORE",
+      titre_lien : "Site APORE.fr",
       lien : "https://apore.fr"
     },
     { 

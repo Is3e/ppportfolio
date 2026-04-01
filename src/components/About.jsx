@@ -68,7 +68,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id="apropos" ref={containerRef} className="max-w-[75%] mx-auto px-6 py-24 overflow-hidden">
+    <section id="apropos" ref={containerRef} className="max-w-[85%] mx-auto px-8 py-24 overflow-hidden">
       
       {/* Structure Globale : Image à Gauche | Ta Div Principale à Droite */}
       <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-12 items-center">
@@ -102,7 +102,7 @@ const About = () => {
             
             {/* Colonne Gauche Originale */}
             <div>
-              <p className="text-gray-900 text-lg leading-relaxed mb-8 text-justify">
+              <p className="text-gray-900 text-md leading-relaxed mb-8 text-justify">
                 Actuellement en dernière année de <strong className="font-bold text-gray-900">Bachelor Universitaire Métiers du Multimédia et de l'Internet</strong>, je suis une jeune développeuse web créative. 
                 Ces trois dernières années, je me suis spécialisée dans le domaine du développement web en intégrant le parcours éponyme au BUT de Blois, de la conception de wireframes, à leur développement puis leur déploiement en ligne. J’ai également des bases en structures réseaux.
               </p>
@@ -110,7 +110,7 @@ const About = () => {
             </div>
             
             {/* Colonne Droite Originale */}
-            <div className="text-gray-600 text-lg leading-relaxed flex flex-col md:flex-row gap-8 mb-10">
+            <div className="text-gray-600 text-md leading-relaxed flex flex-col md:flex-row gap-8 mb-10">
               <p className="text-justify">
                 Mes <span className='bg-[#FCE3EF] font-bold'>passions</span> ? Le dessin, les couleurs, l'escalade, la musique et le cinéma international, ReadDead Redemption 2, cuisiner avec mes amis et mon poisson Lewis.
               </p>
