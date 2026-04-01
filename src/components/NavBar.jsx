@@ -16,7 +16,7 @@ const NavBar = () => {
         </div>
         
         {/* Links */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-[#22163A]">
+        <div className="hidden md:flex items-center gap-8 text-lg font-medium text-[#22163A]">
           <a href="#projets" className="hover:text-black transition-colors">Projets</a>
           <a href="#apropos" className="hover:text-black transition-colors">A propos</a>
           <a href="mailto:louiseberthet2@gmail.com" className="hover:text-black transition-colors flex flex-row gap-2"> Contact </a>

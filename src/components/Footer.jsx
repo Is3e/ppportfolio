@@ -6,7 +6,7 @@ import Logo from '../assets/imgs/lewis-bleu.svg';
 const Footer = () => {
   return (
     <footer className="bg-[#340717] text-white w-full">
-      <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row justify-between items-start py-12 px-6">
+      <div className="max-w-[85%] mx-auto w-full flex flex-col md:flex-row justify-between items-start py-12 px-6">
 
         {/* colonne gauche: logo + ancres */}
         <div className="flex sm:flex-row md:flex-col gap-6 md:items-start">
@@ -37,7 +37,7 @@ const Footer = () => {
         </div>
       </div> 
 
-      <div className='flex flex-row justify-between max-w-7xl mx-auto pb-5 px-6'>
+      <div className='flex flex-row justify-between max-w-[85%] mx-auto pb-5 px-6'>
         <img src={Logo} alt="logo" className="w-9" />
         <p className="pb-2 mix-blend-difference">@ {new Date().getFullYear()} - Louise Berthet</p>
       </div>

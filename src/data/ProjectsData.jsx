@@ -39,33 +39,32 @@ export const projectsData = [
       id: 2, 
       title: "Galerie d’art interractive", 
       pitch: "Prise en main Node.js et Express avec le développement d’une API REST.",
-      desc: " ",
+      desc: "Mon but : développer et déployer en ligne une galerie d'art virtuelle full-stack (React / Node.js). Le défi majeur a consisté à automatiser la mise en production grâce à un workflow collaboratif, et à gérer la communication réseau et l'intégrité des données (votes) entre des environnements de développement et de production (Render). Ce projet a été réalisé dans un cadre universitaire avec pour objectif principal l'exploration et la maîtrise des technologies back-end Node.js et Express. Le délai très contraint d'environ deux jours a constitué un défi supplémentaire, exigeant une approche agile et une priorisation stricte des fonctionnalités. L'architecture réseau et l'intégrité des données ont constitué un point central du projet, notamment pour les interactions utilisateur critiques comme les systèmes de votes. Ce défi a nécessité de maintenir une synchronisation parfaite et sécurisée (gestion des états, transactions) entre les environnements de développement (local/staging) et l'environnement de production. L'hébergement de la galerie en ligne sur la plateforme cloud Render a impliqué une configuration réseau et de base de données spécifique, visant à assurer une haute disponibilité et la performance, tout en gérant les différences de configuration inhérentes au passage du développement au déploiement réel.",
       catg: "Web Design",
       date: "Janvier 2026",  
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       traces_projet: [
-        "../assets/imgs/landing-frameup.png",
-        "../assets/imgs/landing-evolve.png", 
-        "", 
-        ""
+        "../src/assets/imgs/api-galerie-landing.png", 
+        "../src/assets/imgs/api-code.png",
+        "../src/assets/imgs/api-card.png"
       ],
       techno : [ 'Node.js', 'React', 'Tailwind' ],
       titre_lien : "Galerie d’art interractive - render",
-      lien : "API"
+      lien : "https://galerie-art-front.onrender.com/"
     },
     { 
       id: 3, 
       title: "Refonte de site web - APORE", 
       pitch: "Conception et déploiement en autonomie d'un site vitrine indusrtiel optimisé (Audit, UI/UX & Développement sur mesure)",
-      desc: "Lors de ce stage, j’ai occupé le poste de développeuse junior en prenant la responsabilité intégrale de la refonte du site web.Après une phase initiale de collaboration stratégique, j’ai repris la gestion du projet en totale autonomie, de la conception (audit de l’existant, définition des besoins, charte graphique et prototypage) au développement d’un thème WordPress sur mesure. Cette mission qui a débuté par une phase d’audit et de maintenance de l’existant, m’a permis de livrer un site accessible, moderne et avec une expérience utilisateur optimisée. Ce projet a consolidé ma maitrise technique en développement et débogage, tout en affirmant ma capacité à gérer des projets complexes en milieu professionnel.",
+      desc: "Lors de ce stage, j’ai occupé le poste de développeuse junior en prenant la responsabilité intégrale de la refonte du site web.Après une phase initiale de collaboration stratégique, j’ai repris la gestion du projet en totale autonomie, de la conception (audit de l’existant, définition des besoins, charte graphique et prototypage) au développement d’un thème WordPress sur mesure. Cette mission qui a débuté par une phase d’audit et de maintenance de l’existant, m’a permis de livrer un site accessible, moderne et avec une expérience utilisateur optimisée avec par exemple, l'implémentation d'un configurateur de devis. Ce projet a consolidé ma maitrise technique en développement et débogage, tout en affirmant ma capacité à gérer des projets complexes en milieu professionnel.",
       catg: "Stage de 2ème année", 
       date: "1 mois", 
       image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      traces_projet: [
-        "",
-        "../assets/imgs/landing-evolve.png", 
-        "", 
-        ""
+      traces_projet: [ 
+        "../src/assets/imgs/APORE_frontpage.png",
+        "../src/assets/imgs/APORE_figma_intercalaires.png",
+        "../src/assets/imgs/APORE_fiche_produit.png",
+        "../src/assets/imgs/APORE_configurateur.png"
       ],
       techno : [ 'Bootstrap', 'HTML', 'PHP', 'WordPress' ],
       titre_lien : "site APORE",

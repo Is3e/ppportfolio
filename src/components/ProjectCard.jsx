@@ -34,7 +34,7 @@ const ProjectCard = ({ id, title, catg, pitch, desc, titre_lien, date, image, li
               )} */}
             </div>
             
-            <p className="text-medium text-gray-500 line-clamp-2 leading-relaxed">
+            <p className="text-lg text-gray-500 line-clamp-2 leading-relaxed">
               {pitch}
             </p>
           </div>
@@ -46,7 +46,7 @@ const ProjectCard = ({ id, title, catg, pitch, desc, titre_lien, date, image, li
                 <button
                   type="button"
                   onClick={() => lien && window.open(lien, '_blank', 'noopener,noreferrer')}
-                  className="text-xs font-semibold text-gray-900 hover:text-pink-600 transition-colors mt-1"
+                  className="text-lg font-semibold text-gray-900 hover:text-pink-600 transition-colors mt-1"
                 >
                   {titre_lien}
                 </button>
@@ -55,11 +55,11 @@ const ProjectCard = ({ id, title, catg, pitch, desc, titre_lien, date, image, li
 
             <div>
               <h3 className='text-gray-400 flex justify-end'>Technos utilisées</h3>
-              <p className="text-xs font-semibold text-gray-900 transition-colors mt-1 flex flex-row">
+              <p className="text-lg font-semibold text-gray-900 transition-colors mt-1 flex flex-row">
                 {techno.map((tech, index) => (
                   <span
                     key={index} 
-                    className="px-2 text-gray-700 text-xs whitespace-nowrap flex justify-end"
+                    className="px-2 text-gray-700 text-lg whitespace-nowrap flex justify-end"
                   >
                     {tech}
                   </span>

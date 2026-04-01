@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Link2 } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import portrait from '../assets/imgs/front.JPG';
 import letterBoxd from '../assets/imgs/letterboxd.jpeg';
+
+// import {cv} from '../assets/imgs/CV_Louise_BERTHET_2026.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,7 +68,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id="apropos" ref={containerRef} className="max-w-7xl mx-auto px-6 py-24 overflow-hidden">
+    <section id="apropos" ref={containerRef} className="max-w-[75%] mx-auto px-6 py-24 overflow-hidden">
       
       {/* Structure Globale : Image à Gauche | Ta Div Principale à Droite */}
       <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-12 items-center">
@@ -87,7 +89,7 @@ const About = () => {
         <div ref={textRef}>
           
           {/* Ton H2 Animé */}
-          <h2 className="text-xl md:text-3xl font-bold mb-12 leading-tight flex flex-wrap gap-x-2">
+          <h2 className="text-xl md:text-4xl font-bold mb-12 leading-tight flex flex-wrap gap-x-2">
             {words.map((word, index) => (
               <span key={index} className="title-word inline-block origin-bottom-left text-gray-900">
                 {word}
@@ -100,7 +102,7 @@ const About = () => {
             
             {/* Colonne Gauche Originale */}
             <div>
-              <p className="text-gray-900 text-md leading-relaxed mb-8 text-justify">
+              <p className="text-gray-900 text-lg leading-relaxed mb-8 text-justify">
                 Actuellement en dernière année de <strong className="font-bold text-gray-900">Bachelor Universitaire Métiers du Multimédia et de l'Internet</strong>, je suis une jeune développeuse web créative. 
                 Ces trois dernières années, je me suis spécialisée dans le domaine du développement web en intégrant le parcours éponyme au BUT de Blois, de la conception de wireframes, à leur développement puis leur déploiement en ligne. J’ai également des bases en structures réseaux.
               </p>
@@ -108,16 +110,17 @@ const About = () => {
             </div>
             
             {/* Colonne Droite Originale */}
-            <div className="text-gray-600 text-md leading-relaxed flex flex-col md:flex-row gap-8 mb-10">
+            <div className="text-gray-600 text-lg leading-relaxed flex flex-col md:flex-row gap-8 mb-10">
               <p className="text-justify">
-                Mes <span className='bg-[#FCE3EF] font-bold'>passions</span> ? Le dessin, l'escalade, la photographie, la musique et le cinéma international, ReadDead Redemption 2, cuisiner avec mes amis et mon poisson Lewis.
+                Mes <span className='bg-[#FCE3EF] font-bold'>passions</span> ? Le dessin, les couleurs, l'escalade, la musique et le cinéma international, ReadDead Redemption 2, cuisiner avec mes amis et mon poisson Lewis.
               </p>
               <p className="text-justify">
-                Ma <span className='bg-[#FCE3EF] font-bold'>prochaine mission</span> ? Mon stage à l'Inserm de Tours qui commence début mars et s'achevera fin juin.
+                Ma <span className='bg-[#FCE3EF] font-bold'> mission du moment</span> ? Actuellement, j'effectue un stage au sein d'une unité de recherche de l'INSERM de Tours. Mon travail consiste en du développement et de l'UX design d'animations personnalisées, adapté aux besoins spécifiques d'enfants avec des TSA (Troubles du Spectre de l'Autisme), en collaboration avec une équipe d'orthophonistes.
               </p>
               
             </div>
             <div className="flex flex-row gap-5">
+              {/* <a href={cv}> <Link2 /> </a> */}
               <a href="https://boxd.it/aDe1L"> <img src={letterBoxd} alt="" width={45} className='rounded-full'/></a>
               <a href="mailto:louiseberthet2@gmail.com" className="border border-[#7FC9AC] text-[#7FC9AC] px-6 py-3 rounded-full font-medium inline-flex items-center gap-3 hover:bg-[#A1CCBB] hover:text-white transition-colors shadow-lg shadow-pink-200/50 text-md">
                 Vous voulez en parler ? <ArrowRight size={16} />

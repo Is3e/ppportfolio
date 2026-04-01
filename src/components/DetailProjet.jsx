@@ -14,9 +14,9 @@ const DetailProjet = () => {
     return (
         <div className='relative'>
             <aside className='md:fixed md:top-0 md:left-0 md:h-screen md:overflow-auto md:w-1/2 md:px-8 md:py-10 w-full relative px-4 py-8 hide-scrollbar'>
-                <div className='max-w-[720px] justify-between '>
+                <div className='max-w-[820px] justify-between '>
 
-                    <Link to="/" className="text-sm text-gray-600 mb-4 inline-block">&lt; Back</Link>
+                    <Link to="/" className="text-md text-gray-600 mb-4 inline-block">&lt; Back</Link>
                     <h2 className='text-8xl py-2 pb-5'>{project.title}</h2>
 
                     <div className='flex item-center justify-between mb-6'>
@@ -40,12 +40,16 @@ const DetailProjet = () => {
                             {project.pitch}
                         </p>
 
-                        <p className='text-1xl'> 
+                        <p className='text-lg'> 
                             {project.desc}
                         </p>
                         
                         <div className='flex my-8 text-1xl gap-6 mb-8'>
-                            <a href={project.lien} className='underline'>lien vers le projet</a>
+                            <a 
+                                href={project.lien} 
+                                className='underline hover:text-pink-600 transition-colors'
+                                onClick={() => lien && window.open(lien, '_blank', 'noopener,noreferrer')}
+                            >lien vers le projet</a>
                         </div>
                     </div>
                     

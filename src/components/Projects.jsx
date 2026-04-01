@@ -7,13 +7,13 @@ const Projects = () => {
   return (
     <>
     <Skills />
-    <section id="projets" className="max-w-7xl mx-auto px-6 py-24">
+    <section id="projets" className="max-w-[85%] mx-auto px-6 py-24">
       <h2 className="text-6xl font-bold text-[#070E34] mb-8">
         Mes derniers projets
       </h2>
       
       
-      <div className="flex flex-col pb-2">
+      <div className="flex flex-col pb-2 pt-5">
         {projectsData.map((project) => (
           <ProjectCard 
             key={project.id} 
