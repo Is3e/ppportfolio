@@ -20,8 +20,8 @@ const ProjectCard = ({ id, title, catg, pitch, desc, titre_lien, date, image, li
           />
         </div>
 
-        {/* Contenu à droite */}
-        <div className="flex flex-col justify-end flex-1 px-8 py-6 w-8xl">
+        {/* Contenu textuel à droite */}
+        <div className="flex flex-col justify-center flex-1 px-8 py-6 w-8xl">
           <div className='mb-10'>
             <div className="flex justify-between items-end mb-3">
               <h2 className="text-3xl font-bold text-gray-800 w-80">
@@ -38,23 +38,8 @@ const ProjectCard = ({ id, title, catg, pitch, desc, titre_lien, date, image, li
               {pitch}
             </p>
           </div>
-          
-          <div className='flex justify-between items-end my-8'>
-            {lien && typeof lien === 'string' && lien.trim() !== '' && (
-              <div className='group hover:text-pink-600 transition-colors'>
-                <h3 className='text-gray-400'>Lien du projet</h3>
-                <button
-                  type="button"
-                  onClick={() => lien && window.open(lien, '_blank', 'noopener,noreferrer')}
-                  className="text-sm font-semibold text-gray-900 hover:text-pink-600 transition-colors mt-1"
-                >
-                  {titre_lien}
-                </button>
-              </div>
-            )}
 
-            <div>
-              <h3 className='text-gray-400 flex justify-end'>Technos utilisées</h3>
+          <div className='flex justify-between items-end mt-3'>
               <p className="text-sm font-semibold text-gray-900 transition-colors mt-1 flex flex-row">
                 {techno.map((tech, index) => (
                   <span
@@ -65,7 +50,19 @@ const ProjectCard = ({ id, title, catg, pitch, desc, titre_lien, date, image, li
                   </span>
                 ))}
               </p>
-            </div>
+          
+          
+            {lien && typeof lien === 'string' && lien.trim() !== '' && (
+              <div className='group hover:text-pink-600 transition-colors'>
+                <button
+                  type="button"
+                  onClick={() => lien && window.open(lien, '_blank', 'noopener,noreferrer')}
+                  className="text-sm font-semibold text-gray-900 hover:text-pink-600 transition-colors mt-1"
+                >
+                  Voir le site
+                </button>
+              </div>
+            )}
 
           </div>
         </div>

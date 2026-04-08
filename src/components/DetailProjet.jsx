@@ -17,7 +17,7 @@ const DetailProjet = () => {
                 <div className='max-w-[820px] justify-between '>
 
                     <Link to="/" className="text-md text-gray-600 mb-4 inline-block">&lt; Back</Link>
-                    <h2 className='text-8xl py-2 pb-5'>{project.title}</h2>
+                    <h2 className='text-5xl py-2 pb-5'>{project.title}</h2>
 
                     <div className='flex item-center justify-between mb-6'>
                         <div className='flex flex-wrap'>
@@ -40,10 +40,38 @@ const DetailProjet = () => {
                             {project.pitch}
                         </p>
 
-                        <p className='text-lg'> 
+                        {/* <p className='text-lg'> 
                             {project.desc}
-                        </p>
+                        </p> */}
                         
+                        {/* Restructuration de la description */}
+                        {project.descr && project.descr.length > 0 && (
+                            <div className='mt-8 text-gray-800'>
+                                <h3 className='font-bold text-lg mb-6'>Restructuration de la description du projet :</h3>
+                                
+                                <ul className='flex flex-col gap-6 pl-4 list-disc marker:text-black'>
+                                    {project.descr.map((section, index) => (
+                                        <li key={index} className='pl-2'>
+                                            <strong className='text-base block mb-2'>{section.title}</strong>
+                                            <p className='text-sm leading-relaxed mb-2'>
+                                                {section.text}
+                                            </p>
+                                            
+                                            {/* Affichage de la sous-liste s'il y en a une (ex: Mon rôle) */}
+                                            {section.list && (
+                                                <ul className='list-disc pl-5 mt-2 flex flex-col gap-1 text-sm leading-relaxed marker:text-gray-600'>
+                                                    {section.list.map((item, i) => (
+                                                        <li key={i}>{item}</li>
+                                                    ))}
+                                                </ul>
+                                            )}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
+
+
                         <div className='flex my-8 text-1xl gap-6 mb-8'>
                             <a 
                                 href={project.lien} 
