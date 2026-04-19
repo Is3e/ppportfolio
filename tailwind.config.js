@@ -7,8 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        // Cela applique "TT Firs Neue" partout par défaut
-        sans: ['"TT Firs Neue"', 'sans-serif'],
+        sans: ['"DM Sans"', 'sans-serif'],
       },
     },
   },

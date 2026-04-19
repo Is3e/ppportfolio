@@ -8,8 +8,6 @@
   themes: light --default, dark --prefersdark;
 }
 
-
-
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -127,4 +125,8 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+body{
+  font-family: "DM Sans", sans-serif;
 }

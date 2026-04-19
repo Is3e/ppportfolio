@@ -17,7 +17,7 @@ const DetailProjet = () => {
                 <div className='max-w-[820px] justify-between '>
 
                     <Link to="/" className="text-md text-gray-600 mb-4 inline-block">&lt; Back</Link>
-                    <h2 className='text-5xl py-2 pb-5'>{project.title}</h2>
+                    <h2 className='text-6xl pt-8 py-2 pb-6'>{project.title}</h2>
 
                     <div className='flex item-center justify-between mb-6'>
                         <div className='flex flex-wrap'>
@@ -36,9 +36,13 @@ const DetailProjet = () => {
                     </div>
                 
                     <div className='mb-6 text-gray-700'>
-                        <p className='text-2xl mb-5 '> 
+                        {/* <p className='text-2xl mb-5 '> 
                             {project.pitch}
-                        </p>
+                        </p> */}
+
+                        <h2 className='py-4 text-lg'>
+                            {project.contexte}
+                        </h2>
 
                         {/* <p className='text-lg'> 
                             {project.desc}
@@ -47,19 +51,19 @@ const DetailProjet = () => {
                         {/* Restructuration de la description */}
                         {project.descr && project.descr.length > 0 && (
                             <div className='mt-8 text-gray-800'>
-                                <h3 className='font-bold text-lg mb-6'>Restructuration de la description du projet :</h3>
+                                {/* <h3 className='font-bold text-lg mb-6'>Restructuration de la description du projet :</h3> */}
                                 
                                 <ul className='flex flex-col gap-6 pl-4 list-disc marker:text-black'>
                                     {project.descr.map((section, index) => (
                                         <li key={index} className='pl-2'>
-                                            <strong className='text-base block mb-2'>{section.title}</strong>
-                                            <p className='text-sm leading-relaxed mb-2'>
+                                            <p className='text-lg font-medium block mb-2'>{section.title}</p>
+                                            <p className='text-base leading-relaxed mb-2'>
                                                 {section.text}
                                             </p>
                                             
                                             {/* Affichage de la sous-liste s'il y en a une (ex: Mon rôle) */}
                                             {section.list && (
-                                                <ul className='list-disc pl-5 mt-2 flex flex-col gap-1 text-sm leading-relaxed marker:text-gray-600'>
+                                                <ul className='list-disc pl-5 mt-2 flex flex-col gap-1 text-base pt-1 leading-relaxed marker:text-gray-600'>
                                                     {section.list.map((item, i) => (
                                                         <li key={i}>{item}</li>
                                                     ))}

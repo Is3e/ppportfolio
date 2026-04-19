@@ -2,10 +2,15 @@ import React, { useEffect, useRef } from 'react';
 import { ArrowRight, Link2 } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import portrait from '../assets/imgs/front.JPG';
-import letterBoxd from '../assets/imgs/letterboxd.jpeg';
+import letterboxd from '../assets/imgs/letterboxd.jpeg';
 
-// import {cv} from '../assets/imgs/CV_Louise_BERTHET_2026.png';
+// import portrait from '../assets/imgs/front.JPG';
+import portrait from '../assets/imgs/portrait-Louise_BERTHET.JPG';
+import escalade from "../assets/imgs/escalade.jpg";
+import peinture from "../assets/imgs/peinture.jpg";
+import films from '../assets/imgs/letterboxd.jpg';
+import cuisine from "../assets/imgs/cuisine.jpg";
+import photo from "../assets/imgs/photo.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,8 +20,9 @@ const About = () => {
   const textRef = useRef(null);
 
   // Le texte exact que tu m'as fourni (avec correction typo "éclectique")
-  const titleText = "Je m'appelle Louise et je suis une jeune développeuse créative, éclectique et curieuse !";
+  const titleText = "Salut ! Moi c'est Louise";
   const words = titleText.split(" ");
+  
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -71,66 +77,123 @@ const About = () => {
     <section id="apropos" ref={containerRef} className="max-w-[85%] mx-auto px-8 py-24 overflow-hidden">
       
       {/* Structure Globale : Image à Gauche | Ta Div Principale à Droite */}
-      <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-12 items-center">
+      <div className="">
         
-        {/* --- ZONE IMAGE (Nouvel ajout) --- */}
-        <div ref={imageRef} className="relative hidden lg:block h-full min-h-[500px]">
-           {/* Forme décorative arrière */}
-           <div className="absolute rounded-3xl "></div>
-           
-           <img 
-              src={portrait}
-              alt="Louise" 
-              className="w-full h-full object-cover rounded-3xl shadow-xl "
-           />
-        </div>
-
         {/* --- ZONE CONTENU (Ta div originale remise ici) --- */}
         <div ref={textRef}>
-          
-          {/* Ton H2 Animé */}
-          <h2 className="text-xl md:text-4xl font-bold mb-12 leading-tight flex flex-wrap gap-x-2">
+         <h2 className="text-xl md:text-4xl font-bold mb-12 leading-tight flex flex-wrap gap-x-2">
             {words.map((word, index) => (
               <span key={index} className="title-word inline-block origin-bottom-left text-gray-900">
                 {word}
               </span>
             ))}
           </h2>
-
-          {/* Ta structure originale exacte (Bio + Stats) */}
-          <div className="original-content items-start">
-            
-            {/* Colonne Gauche Originale */}
-            <div>
-              <p className="text-gray-900 text-md leading-relaxed mb-8 text-justify">
-                Actuellement en dernière année de <strong className="font-bold text-gray-900">Bachelor Universitaire Métiers du Multimédia et de l'Internet</strong>, je suis une jeune développeuse web créative. 
-                Ces trois dernières années, je me suis spécialisée dans le domaine du développement web en intégrant le parcours éponyme au BUT de Blois, de la conception de wireframes, à leur développement puis leur déploiement en ligne. J’ai également des bases en structures réseaux.
-              </p>
-              
-            </div>
-            
-            {/* Colonne Droite Originale */}
-            <div className="text-gray-600 text-md leading-relaxed flex flex-col md:flex-row gap-8 mb-10">
-              <p className="text-justify">
-                Mes <span className='bg-[#FCE3EF] font-bold'>passions</span> ? Le dessin, les couleurs, l'escalade, la musique et le cinéma international, ReadDead Redemption 2, cuisiner avec mes amis et mon poisson Lewis.
-              </p>
-              <p className="text-justify">
-                Ma <span className='bg-[#FCE3EF] font-bold'> mission du moment</span> ? Actuellement, j'effectue un stage au sein d'une unité de recherche de l'INSERM de Tours. Mon travail consiste en du développement et de l'UX design d'animations personnalisées, adapté aux besoins spécifiques d'enfants avec des TSA (Troubles du Spectre de l'Autisme), en collaboration avec une équipe d'orthophonistes.
-              </p>
-              
-            </div>
-            <div className="flex flex-row gap-5">
-              {/* <a href={cv}> <Link2 /> </a> */}
-              <a href="https://boxd.it/aDe1L"> <img src={letterBoxd} alt="" width={45} className='rounded-full'/></a>
-              <a href="mailto:louiseberthet2@gmail.com" className="border border-[#7FC9AC] text-[#7FC9AC] px-6 py-3 rounded-full font-medium inline-flex items-center gap-3 hover:bg-[#A1CCBB] hover:text-white transition-colors shadow-lg shadow-pink-200/50 text-md">
-                Vous voulez en parler ? <ArrowRight size={16} />
-              </a>
-
-            </div>
-
-          </div>
         </div>
-      </div>
+
+        <section className='flex row gap-10'>
+{/*               section des textes                */}
+          <section className="contenu w-[60%]">
+            
+            <div className="introGen">
+              <div>
+                <p className="text-gray-800 text-md leading-relaxed mb-8 text-justify">
+                  Je suis une jeune développeuse Front-End, mais avant tout, je suis passionnée par la façon dont les gens interagissent avec le web. 
+                  Je crois qu'un bon projet ne doit pas seulement être beau ou fonctionner techniquement : il doit avoir une âme, être intuitif et, surtout, être accessible à tout le monde.
+                </p>
+
+                <p className="text-gray-800 text-md leading-relaxed mb-8 text-justify">
+                  Actuellement dans ma dernière année de BUT Métiers du Multimédia et de l'Internet (MMI) à Blois, j'ai eu la chance d'explorer tout le spectre de la création digitale. 
+                  De la première esquisse sur Figma jusqu'au déploiement en ligne, en passant par les bases du back-end et du réseau, j'ai appris à comprendre chaque rouage d'un projet.
+                </p>
+
+              </div>
+
+              <div>
+                <h3 className='font-medium pb-2 text-3xl'>Pourquoi le front end ?</h3>
+                <p>
+                  C'est là que je peux lier mon esprit logique à ma sensibilité créative. 
+                  J'aime résoudre des problèmes en utilisant le code et le design pour rendre les outils de tous les jours plus simples, plus beaux et plus inclusifs.
+                </p>
+              </div>
+
+              <section className='xp flex flex-row pt-8 gap-10'>
+                <div className='Etudes w-[38%]'>
+                  <h3 className='pb-6 text-3xl'>Etudes</h3>
+
+                  <div className=''>
+                    <h4 className='font-medium'>Septembre 2026</h4>
+                    <p className=''>ECV Nantes</p>
+                    <p className='text-gray-400 font-light'>Stage de 3ème année MMI, INSERM de Tours</p>
+                  </div>
+
+                  <div className='pt-5'>
+                    <h4 className='font-medium'>2023-2026</h4>
+                    <p className=''>BUT Métiers du Multimédia et de l’internet - développement web.</p>
+                    <p className='text-gray-400 font-light'>IUT de Blois à Blois, 41000</p>
+                  </div>
+
+                  <div className='pt-5'>
+                    <h4 className='font-medium'>2020-2023 </h4>
+                    <p className=''>Lycée Charles Peguy - Baccalauréat général - LLCE et NSI</p>
+                    <p className='text-gray-400 font-light'>Lycée Charles Peguy à Gorges, 44190</p>
+                  </div>
+                </div>
+
+                <div className='Expériences w-[38%]'>
+                  <h3 className='pb-6 text-3xl'>Expériences</h3>
+                  
+                  <div className=''>
+                    <h4 className='font-medium'>Mars-Juin 2026. </h4>
+                    <p className='pt2'>Animations vocales temps reel en JS</p>
+                    <p className='text-gray-400 pt2 font-light'>Stage de 3ème année MMI, INSERM de Tours</p>
+                  </div>
+
+                  <div className='pt-4'>
+                    <h4 className='font-medium'>Septembre - Janvier 2026.</h4>
+                    <p className='pt2'>FrameUp - Développement d’un headless CMS</p>
+                    <p className='text-gray-400 pt2 font-light'>Projet universitaire dernière année, IUT de Blois </p>
+                  </div>
+                  
+                  <div className='pt-4'>
+                    <h4 className='font-medium'>Avril - Juin 2025.</h4>
+                    <p className='pt2'>Refonte de site web</p>
+                    <p className='text-gray-400 pt2 font-light'>Stage de 2ème année MMI, APORE, Chaussée Saint Victor</p>
+                  </div>
+                </div>
+              </section>
+
+            </div>
+          </section>
+
+{/*            section des images à droites          */}
+          <section className="illus w-[40%] ">{/* --- ZONE IMAGE (Nouvel ajout) --- */}
+            <div ref={imageRef} className="w-96 pb-10">              
+              <img 
+                  src={portrait}
+                  alt="Louise" 
+                  className="w-full h-full object-cover shadow-xl "
+              />
+            </div>
+
+            <div className='pt-10 '>
+              <h3>Centres d'interêts</h3>
+
+              <div className='flex row gap-4'>
+                <img 
+                    src={escalade}
+                    alt="escalade" 
+                    className="w-42 h-full object-cover"
+                />
+                <p className='text-md'>Escalade</p>
+              </div>
+
+            </div>
+          </section>
+        </section>
+
+{/*            fin section          */}
+        </div>
+      {/* </div> */}
     </section>
   );
 };
