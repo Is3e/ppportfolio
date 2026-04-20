@@ -58,9 +58,9 @@ export const projectsData = [
       catg: "Dev front end", 
       date: "1 mois", 
       image: landingN,
-      traces_projet: [ imgEvolve1, aboutF, offreF, figma ],
+      traces_projet: [ pageAccueil, figmaToupie, useToupie ],
       techno : [ 'JS', 'Python', 'Figma' ],
-      titre_lien : " ",
+      titre_lien : "",
       lien : " "
     },
 
