@@ -9,7 +9,7 @@ const Hero = () => {
     <div className="relative min-h-screen overflow-hidden bg-[#7FC9AC] flex justify-center ">
 
       <div className="mt-[7rem] text-center px-6">
-        <h1 className="text-[6rem] mx-auto mt-10 md:text-[7rem] lg:text-[10rem] leading-[0.9] font-bold uppercase tracking-tight">
+        <h1 className="text-[6rem] mx-auto mt-10 md:text-[7rem] lg:text-10xl leading-[0.9] font-bold uppercase tracking-tight">
           Louise Berthet
         </h1>
       </div>

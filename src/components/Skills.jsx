@@ -85,16 +85,16 @@ const Skills = () => {
                     {skills.map((skill) => (
                         <div 
                             key={skill.id} 
-                            className="color group relative w-72 h-72 flex-shrink-0 snap-start transition-transform duration-300 ease-out hover:-translate-y-3 cursor-pointer"
+                            className="color group relative w-55 h-55 flex-shrink-0 snap-start transition-transform duration-300 ease-out hover:-translate-y-3 cursor-pointer"
                         >
                             
-                            {/* 1. L'arrière du dossier (Violet uni) */}
+                            {/* L'arrière du dossier */}
                             <div className="absolute inset-0 z-0 drop-shadow-xl">
                                 <div className="absolute top-0 left-0 w-[55%] h-12 rounded-tl-2xl rounded-tr-xl" style={{ backgroundColor: skill.color }} />
                                 <div className="absolute top-6 left-0 w-full h-[calc(100%-1.5rem)] rounded-2xl" style={{ backgroundColor: skill.color }} />
                             </div>
 
-                            {/* 2. L'image du projet glissée à l'intérieur */}
+                            {/* L'image du projet glissée à l'intérieur */}
                             <div className="absolute z-10 top-10 left-4 right-4 h-36 rounded-xl overflow-hidden shadow-lg transition-transform duration-500 group-hover:-translate-y-2 group-hover:rotate-[-2deg] bg-white">
                                 <img 
                                     src={skill.imageSrc} 
@@ -103,7 +103,7 @@ const Skills = () => {
                                 />
                             </div>
 
-                            {/* 3. Le devant du dossier (Effet Glassmorphism / Flou) */}
+                            {/* Le devant du dossier (Effet Glassmorphism / Flou) */}
                             <div className="absolute z-20 bottom-0 left-0 w-full h-[60%] bg-white/20 backdrop-blur-md rounded-2xl border border-white/30 shadow-[0_-4px_24px_rgba(0,0,0,0.1)] p-5 flex flex-col justify-between overflow-hidden">
                                 
                                 <div>

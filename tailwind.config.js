@@ -7,11 +7,15 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"DM Sans"', 'sans-serif'],
+        worksans: ['"Work Sans"', 'sans-serif'],
       },
     },
   },
   plugins: [
+    require("tailwindcss-animate"),
     require('daisyui'),
   ],
+  daisyui: {
+    themes: ["light", "dark"], // simple, propre, compatible
+  },
 }
